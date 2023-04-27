@@ -1,3 +1,49 @@
+---
+marp: true
+paginate: true
+header: '![w:200](https://cd.makandra.de/downloads/logo/makandra_word_dark_color_rgb_compact-d55d99c4.png)'
+footer: 'Andreas Vöst @makandra GmbH'
+theme: default
+html: false
+pdf: true
+style: |
+  :root {
+    --color-fg-default: #eff;
+    --color-canvas-default: #246;
+  }
+  section {
+    background-color: #20304c;
+    color: #ccd4d9;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+  }
+  header {
+    left: auto;
+    right: 10px;
+    top: 10px
+  }
+  a {
+    color: #e61d47;
+    text-decoration: underline;
+  }
+  img {
+    background-color: transparent;
+  }
+  h1 {
+    color: #e61d47;
+    font-size: 40px;
+  }
+  h2 {
+    color: #e61d47;
+    font-size: 30px;
+  }
+  code {
+    color: SlateGray;
+  }
+
+---
+
 # Pimp My Shell
 
 1. Slides and Vagrant-VM
