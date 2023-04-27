@@ -1,0 +1,12 @@
+Filesystem      Size  Used Avail Use% Mounted on
+udev            472M     0  472M   0% /dev
+tmpfs            98M  968K   97M   1% /run
+/dev/sda1        39G  1.4G   38G   4% /
+tmpfs           489M     0  489M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           489M     0  489M   0% /sys/fs/cgroup
+/dev/loop0       62M   62M     0 100% /snap/core20/1434
+/dev/loop1       45M   45M     0 100% /snap/snapd/15534
+/dev/loop2       68M   68M     0 100% /snap/lxd/22753
+tmpfs            98M     0   98M   0% /run/user/1000
+vagrant         467G  275G  193G  59% /vagrant

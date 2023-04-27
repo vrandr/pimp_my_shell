@@ -1,0 +1,14 @@
+syntax on
+set mouse=
+set background=dark
+set laststatus=2
+set statusline=%<[%n]\ %.90F\ %y\ %m%r%=%{exists('g:loaded_fugitive')?fugitive#statusline():''}\ %{&enc}[%{(&fenc!=&enc)?&fenc.':':''}%{&ff}]\ %13.(%c,%l/%L%)\ %6.((%p%%)%)
+set number
+set numberwidth=4
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set incsearch
+set hlsearch
+set autoindent
+filetype plugin indent on

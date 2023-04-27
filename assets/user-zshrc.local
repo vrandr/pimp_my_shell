@@ -1,0 +1,66 @@
+# -*- mode: zsh -*-
+# vi: set ft=zsh :
+
+# grml undo
+unalias -m ag
+typeset -f trans >/dev/null && unfunction trans
+
+# env
+export PATH=${PATH}:${HOME}/bin:${HOME}/.local/bin:${HOME}/go/bin
+
+# aliases
+alias bat="command batcat"
+alias chatgpt='command python3 "${HOME}/demo/chatgpt-cli/chatgpt.py"'
+alias curls="command curl --proto-default https"
+alias diff="command diff --color=auto"
+alias fd='/usr/lib/cargo/bin/fd'
+alias ip="command ip -c"
+alias llv='command exa --long --header --inode --links --blocks --group --time-style=long-iso'
+alias ncdu="command ncdu --color=dark"
+alias r='source "${HOME}/.zshrc.local"'
+alias sudoe='command sudo -s -E'
+alias sudoi='command sudo -i'
+alias watch="command watch -c"
+
+# suffix aliases
+alias -s crt='command openssl x509 -text -noout -in '
+alias -s pem='command openssl x509 -text -noout -in '
+alias -s md='command glow -p'
+
+# asdf
+source "${HOME}/.asdf/asdf.sh"
+if [[ ${EUID} -ne 0 ]]; then
+  fpath=(${ASDF_DIR}/completions $fpath)
+  autoload -Uz compinit && compinit
+fi
+
+# command-not-found
+source /etc/zsh_command_not_found
+
+# less
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+export LESS="FRXMK"
+
+# zsh-autosuggestion
+# source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# bindkey "\e[Z" autosuggest-accept  # shift+tab
+
+# fast-syntax-highlighting
+# source "${HOME}/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
+
+# zsh-syntax-highlighting
+# source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# zinit
+# source "${HOME}/.zsh/zinit/zinit.zsh"
+# zinit light zsh-users/zsh-completions
+# zinit snippet OMZ::lib/git.zsh
+# zinit snippet OMZ::plugins/git/git.plugin.zsh
+
+# starship
+# prompt off
+# eval "$(starship init zsh)"
+
+# fzf
+# source /usr/share/doc/fzf/examples/completion.zsh
+# source /usr/share/doc/fzf/examples/key-bindings.zsh

@@ -1,0 +1,12 @@
+[status]
+format = '[$status]($style) '
+disabled = true
+
+# [username]
+# format = '[$user]($style)'
+# style_root = 'red bold'
+# style_user = 'blue bold'
+
+# [hostname]
+# format="[@$hostname]($style) "
+# style="bold dimmed white"
